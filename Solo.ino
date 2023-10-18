@@ -21,8 +21,8 @@ void loop()
   Serial.println(analogRead(pinoSensorUmidade));
   delay(250); // aumenta ou diminiui o tempo no terminal
 
-  if (analogRead(pinoSensorUmidade) > 1000)
-  { // voce pode usar duas variações < para menor que e o > para maior que
+  if (analogRead(pinoSensorUmidade) > 1000) // Caso a umidade for maior que X vai mostrar que e solo desidratado 
+  { 
 
     lcd.print("     Solo");
     delay(1000);
@@ -32,8 +32,8 @@ void loop()
     lcd.setCursor(0, 0);
     lcd.clear();
   }
-  else if (analogRead(pinoSensorUmidade) < 980)
-  { //vlw giu<3
+  else if (analogRead(pinoSensorUmidade) < 980) // Caso a umidade for menor que X ele vai mostrar que esta hidratado
+  {
     lcd.print("     Solo");
     delay(1000);
     lcd.setCursor(0, 1);
