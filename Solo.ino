@@ -33,7 +33,7 @@ void loop()
     lcd.clear();
   }
   else if (analogRead(pinoSensorUmidade) < 980)
-  {
+  { //vlw giu<3
     lcd.print("     Solo");
     delay(1000);
     lcd.setCursor(0, 1);
