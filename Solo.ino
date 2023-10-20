@@ -19,20 +19,20 @@ void setup()
 void loop()
 {
   Serial.println(analogRead(pinoSensorUmidade));
-  delay(250); // aumenta ou diminiui o tempo no terminal
+  delay(150); // aumenta ou diminiui a quantidade de vezes que o arduino manda mensagem
 
-  if (analogRead(pinoSensorUmidade) > 1000) // Caso a umidade for maior que X vai mostrar que e solo desidratado 
+  if (analogRead(pinoSensorUmidade) > 421) // Caso a umidade for maior que 421 vai mostrar que e solo desidratado 
   { 
 
     lcd.print("     Solo");
     delay(1000);
-    lcd.setCursor(0, 1);         // é para descer a coluna do visor 1 casa a baixo
-    lcd.print("  Desidratado"); // e algo que vai sair no terminal como (pouca undidade) ou solo baixo algo assim
+    lcd.setCursor(0, 1);         // É para descer a coluna do visor 1 casa a baixo
+    lcd.print("  Desidratado"); // É algo que vai sair na tela
     delay(1000);
     lcd.setCursor(0, 0);
     lcd.clear();
   }
-  else if (analogRead(pinoSensorUmidade) < 980) // Caso a umidade for menor que X ele vai mostrar que esta hidratado
+  else if (analogRead(pinoSensorUmidade) < 420) // Caso a umidade for menor que 420 ele vai mostrar que esta hidratado
   {
     lcd.print("     Solo");
     delay(1000);
